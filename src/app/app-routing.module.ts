@@ -8,11 +8,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./recipes/recipes.module').then(m => m.RecipesPageModule)
+        loadChildren: () => import('./pages/recipes/recipes.module').then(m => m.RecipesPageModule)
       },
       {
         path: ':recipeId',
-        loadChildren: () => import('./recipes/recipe-detail/recipe-detail.module').then(m => m.RecipeDetailPageModule)
+        loadChildren: () => import('./pages/recipe-detail/recipe-detail.module').then(m => m.RecipeDetailPageModule)
       }
     ]
   },
